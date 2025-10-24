@@ -1,0 +1,92 @@
+/* Study Planner - Tailwind Best Practices */
+
+input:focus, select:focus {
+    outline: none;
+}
+
+/* Subject Colors - College Subjects */
+.maths { 
+    border-left: 5px solid #ef4444;
+    background-color: #fee2e2;
+}
+.fee { 
+    border-left: 5px solid #f59e0b;
+    background-color: #fef3c7;
+}
+.pps { 
+    border-left: 5px solid #10b981;
+    background-color: #d1fae5;
+}
+.emsb { 
+    border-left: 5px solid #3b82f6;
+    background-color: #dbeafe;
+}
+.evs { 
+    border-left: 5px solid #84cc16;
+    background-color: #ecfccb;
+}
+.caeg { 
+    border-left: 5px solid #8b5cf6;
+    background-color: #ede9fe;
+}
+.chem { 
+    border-left: 5px solid #000000;
+    background-color: #f3f4f6;
+}   
+
+/* Subject color circles for calendar */
+.dot-maths { background-color: #ef4444; }
+.dot-fee { background-color: #f59e0b; }
+.dot-pps { background-color: #10b981; }
+.dot-emsb { background-color: #3b82f6; }
+.dot-evs { background-color: #84cc16; }
+.dot-caeg { background-color: #8b5cf6; }
+.dot-chem { background-color: #000000; }
+
+/* Task card smooth transitions */
+.task-card {
+    transition: all 0.3s ease;
+}
+.task-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transform: translateX(4px) translateY(-2px);
+}
+
+/* Calendar day styling */
+.calendar-day {
+    min-height: 70px;
+    border: 2px solid #e5e7eb;
+    cursor: pointer;
+    padding: 6px;
+    transition: all 0.2s ease;
+    border-radius: 8px;
+}
+.calendar-day:hover {
+    background-color: #dbeafe;
+    border-color: #3b82f6;
+    transform: scale(1.02);
+}
+.calendar-day.today {
+    background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+.calendar-day.selected {
+    background: linear-gradient(135deg, #a78bfa 0%, #7c3aed 100%);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(167, 139, 250, 0.4);
+}
+
+/* Smooth fade in */
+.fade-in {
+    animation: fadeIn 0.4s ease-in;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Smooth page scrolling */
+html { scroll-behavior: smooth; }
